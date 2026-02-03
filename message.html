@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Message From Me 💙</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+
+    .letter {
+      max-width: 720px;
+      padding: 35px 40px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.1rem;
+      margin-bottom: 22px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+      opacity: 0.95;
+    }
+
+    .signature {
+      margin-top: 26px;
+      font-size: 1.1rem;
+    }
+
+    .signature span {
+      font-weight: 600;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* 📱 Mobile (scroll allowed only if needed) */
+    @media (max-width: 700px) {
+      body {
+        height: auto;
+        padding: 20px 0;
+      }
+
+      .letter {
+        padding: 30px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="letter">
+    <h1>From Me to You 💙</h1>
+
+    <p>
+      I don’t always say everything out loud,  
+      but I hope you know how much I value you  
+      just for being who you are.
+    </p>
+
+    <p>
+      No matter how busy life gets,  
+      our bond has always felt steady and familiar,  
+      and that’s something I truly value.
+    </p>
+
+    <p>
+      I really appreciate the little things about you —  
+      the way you are, the way you think,  
+      and the way you handle things.
+    </p>
+
+    <p>
+      Watching you grow, change, and move forward  
+      has been one of the most meaningful things for me.  
+      Even when life feels heavy,  
+      please remember you never have to carry it alone.
+    </p>
+
+    <p>
+      No matter where you go or how far you travel,  
+      my support, my care, and my prayers  
+      will always walk beside you.
+    </p>
+
+    <div class="signature">
+      With all my love,<br>
+      <span>Your Sister 💙</span>
+    </div>
+
+    <div class="cta">
+      <button onclick="goNext()">Wishes 💬</button>
+    </div>
+  </div>
+
+  <script>
+    function goNext() {
+      window.location.href = "future.html";
+    }
+  </script>
+
+</body>
+</html>

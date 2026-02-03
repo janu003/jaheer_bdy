@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One Last Promise 💙</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .box {
+      max-width: 700px;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    button {
+      padding: 14px 40px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background: #ffcc00;
+      color: #000;
+    }
+
+    .no {
+      background: #333;
+      color: #fff;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    .message {
+      margin-top: 40px;
+      font-size: 1.3rem;
+      display: none;
+    }
+
+    .love {
+      color: #ffcc00;
+      font-weight: 600;
+    }
+
+    .error {
+      color: #ff6b6b;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>Will you promise we’ll always have each other?</h1>
+
+    <div class="buttons">
+      <button class="yes" onclick="yesClick()">Yes 💙</button>
+      <button class="no" onclick="noClick()">No</button>
+    </div>
+
+    <div id="yesMsg" class="message love">
+      Always us.  
+      Always this bond.  
+      Always my brother. 💙  
+      <br><br>
+      Love U bro 🤍
+      <br>
+      Once again Happy birthday My Bro 🥳🫂
+    </div>
+
+    <div id="noMsg" class="message error">
+      ❌ ERROR 404  
+      <br>
+      Bond not breakable.  
+      <br>
+      Option “No” not accepted.
+    </div>
+  </div>
+
+  <script>
+    function yesClick() {
+      document.getElementById("yesMsg").style.display = "block";
+      document.getElementById("noMsg").style.display = "none";
+    }
+
+    function noClick() {
+      document.getElementById("noMsg").style.display = "block";
+      document.getElementById("yesMsg").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why You Matter to Me 💙</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #7c3aed;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 30px;
+      padding: 0 8%;
+    }
+
+    .section.reverse {
+      direction: rtl;
+    }
+
+    .section.reverse .text-box {
+      direction: ltr;
+      text-align: right;
+    }
+
+    .image-box {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-box img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .text-box {
+      max-width: 420px;
+    }
+
+    .text-box h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .text-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.06);
+    }
+
+    /* 📱 Mobile fallback (scroll allowed on small screens) */
+    @media (max-width: 768px) {
+      body {
+        height: auto;
+      }
+
+      .section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .section.reverse {
+        direction: ltr;
+      }
+
+      .text-box {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <div class="image-box">
+      <img src="images/jc-1.jpeg" alt="Brother Memory">
+    </div>
+    <div class="text-box">
+      <h2>You Are Important 💙</h2>
+      <p>
+        You may be younger than me,
+        but the space you hold in my life is deep and unshakable.
+      </p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section reverse">
+    <div class="image-box">
+      <img src="images/jc-2.jpeg" alt="Brother Bond">
+    </div>
+    <div class="text-box">
+      <h2>More Than Words</h2>
+      <p>
+        In a world that keeps changing,
+        you remain one of my constants.
+      </p>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <div class="image-box">
+      <img src="images/jc-3.jpeg" alt="Special Bond">
+    </div>
+    <div class="text-box">
+      <h2>Always My Brother</h2>
+      <p>
+        No matter where life takes us,
+        remember this — you will never walk alone.
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTINUE -->
+  <div class="cta">
+    <button onclick="goNext()">Continue 🎁</button>
+  </div>
+
+  <script>
+    function goNext() {
+      window.location.href = "wishes.html";
+    }
+  </script>
+
+</body>
+</html>

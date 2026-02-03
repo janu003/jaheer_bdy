@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Your Future 🌱</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/future.jpg") center/cover no-repeat;
+      color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      max-width: 720px;
+      padding: 30px 40px;
+      line-height: 1.7;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+      text-align: center; /* keep headings centered */
+    }
+
+    h1 + h1 {
+      margin-bottom: 22px;
+    }
+
+    /* 👇 Paragraph block */
+    .message {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin: 16px 0;
+      opacity: 0.95;
+      text-align: left; /* ✅ LEFT ALIGNMENT */
+    }
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: 600;
+    }
+
+    .cta {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* 📱 Mobile */
+    @media (max-width: 700px) {
+      body {
+        height: auto;
+        padding: 20px 0;
+      }
+
+      .content {
+        height: auto;
+        padding: 30px 24px;
+      }
+
+      .message {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <h1>I See Great Things Ahead 🌱</h1>
+
+    <div class="message">
+      <p>
+        You have so much potential ahead of you,  
+        and I truly believe the best parts of your life  
+        are still waiting to unfold.
+      </p>
+
+      <p>
+        Don’t rush the journey.  
+        Take your time, learn from every step,  
+        and trust that you’re moving in the right direction.
+      </p>
+
+      <p>
+        Chase your goals with confidence,  
+        stay curious about the world,  
+        and never doubt your ability to grow.
+      </p>
+
+      <p class="highlight" style="text-align: center;">
+        I believe in your dreams,  
+        and I believe in you.
+      </p>
+    </div>
+
+    <div class="cta">
+      <button onclick="goNext()">Next ➡️</button>
+    </div>
+  </div>
+
+  <script>
+    function goNext() {
+      window.location.href = "final.html";
+    }
+  </script>
+
+</body>
+</html>

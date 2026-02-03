@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Memories 💙</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #f2f2f2;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin: 20px 0 6px;
+      font-size: 2.3rem;
+    }
+
+    p.subtitle {
+      margin: 0 auto 15px;
+      max-width: 650px;
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    /* 📸 FIXED GRID */
+    .gallery {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      padding: 0 6%;
+      align-content: center;
+      justify-items: center;
+    }
+
+    /* 🔒 LOCK CARD SIZE (IMPORTANT) */
+    .memory {
+      width: 210px;
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+
+    .memory img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ✍️ CAPTION */
+    .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      font-size: 0.9rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.75));
+      text-align: left;
+    }
+
+    /* Grid balance trick (centers last row) */
+    .gallery::after {
+      content: "";
+      grid-column: span 5;
+    }
+
+    /* 🎁 BUTTON */
+    .cta {
+      margin: 12px 0 18px;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.06);
+    }
+
+    /* 📱 Mobile fallback */
+    @media (max-width: 900px) {
+      body {
+        height: auto;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .memory {
+        width: 180px;
+        height: 180px;
+      }
+
+      .gallery::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Our Memories 💙</h1>
+  <p class="subtitle">
+    Some moments don’t need explanations —  
+    they just live quietly in the heart.
+  </p>
+
+  <div class="gallery">
+
+    <div class="memory">
+      <img src="images/jc-9.jpeg">
+      <div class="caption">last year on ur bdy</div>
+    </div>
+
+    <div class="memory">
+      <img src="images/jc-7.jpeg">
+      <div class="caption">our memory in trip 🤩</div>
+    </div>
+
+    <div class="memory">
+      <img src="images/jc-3.jpeg">
+      <div class="caption">2023 on salma bdy 🥳</div>
+    </div>
+
+    <div class="memory">
+      <img src="images/jc-4.jpeg">
+      <div class="caption">its my fav pic of ur naughty things 😹</div>
+    </div>
+
+    <div class="memory">
+      <img src="images/jc-8.jpeg">
+      <div class="caption">We didn’t talk much, but it felt nice 😍</div>
+    </div>
+<br>
+    <div class="memory">
+      <img src="images/jc-5.jpeg">
+      <div class="caption">our video call with funny things 😂</div>
+    </div>
+
+    <div class="memory">
+      <img src="images/jc-10.jpeg">
+      <div class="caption">A random click, but a nice memory 😍</div>
+    </div>
+
+    <div class="memory">
+      <img src="images/jc-6.jpeg">
+      <div class="caption">Expression choodu… acting skills full on 😄</div>
+    </div>
+
+  </div>
+
+  <div class="cta">
+    <button onclick="goNext()">Message 💌</button>
+  </div>
+
+  <script>
+    function goNext() {
+      window.location.href = "message.html";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 🎂</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/jc-0.jpeg") center/cover no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f2f2f2;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 720px;
+      padding: 40px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .message {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 14px 34px;
+      font-size: 1.05rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    #surprise {
+      margin-top: 25px;
+      font-size: 1.15rem;
+      display: none;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .hidden {
+  display: none;
+}
+
+#nextBtn {
+  margin-top: 20px;
+  background: #ffffff;
+  color: #000;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🎉 Happy Birthday 🎂</h1>
+    <h2>My Brother From Another Mother 💙</h2>
+
+    <div class="message">
+      <p>
+        Today is not just about cake or candles.<br>
+        It’s about celebrating *you* —<br>
+        the strength you carry, the kindness you give,<br>
+        and the person you are becoming.
+      </p>
+
+      <p>
+        May this year bring you confidence in yourself,<br>
+        courage in your dreams,<br>
+        and peace in knowing that you are deeply valued.
+      </p>
+    </div>
+
+    <button onclick="showSurprise()">Click for a Surprise 🎁</button>
+    <button id="nextBtn" class="hidden" onclick="goNext()">
+  click for memories 💙
+</button>
+
+
+    <div id="surprise">
+      <p>
+        🌟 No matter where life takes you,<br>
+        I will always be right here — cheering you on.<br><br>
+        With all my love,<br>
+        <strong>Your Sister 💙</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- 🎊 Confetti -->
+  <canvas id="confetti"></canvas>
+
+  <script>
+    function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+  document.getElementById("nextBtn").classList.remove("hidden");
+  startConfetti();
+}
+
+function goNext() {
+  window.location.href = "memories.html"; 
+  // change to about-him.html if you want
+}
+
+
+    const canvas = document.getElementById("confetti");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let confetti = [];
+
+    for (let i = 0; i < 160; i++) {
+      confetti.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 6 + 2,
+        d: Math.random() * 5,
+        color: `hsl(${Math.random() * 360}, 100%, 50%)`
+      });
+    }
+
+    function drawConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confetti.forEach(c => {
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+        ctx.fillStyle = c.color;
+        ctx.fill();
+      });
+      updateConfetti();
+    }
+
+    function updateConfetti() {
+      confetti.forEach(c => {
+        c.y += c.d;
+        if (c.y > canvas.height) {
+          c.y = 0;
+          c.x = Math.random() * canvas.width;
+        }
+      });
+    }
+
+    function startConfetti() {
+      setInterval(drawConfetti, 20);
+    }
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+
+</body>
+</html>
