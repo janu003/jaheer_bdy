@@ -72,6 +72,17 @@
       color: #ff6b6b;
       font-family: monospace;
     }
+
+    /* 👇 Hidden button */
+    .hidden {
+      display: none;
+    }
+
+    .final-btn {
+      margin-top: 30px;
+      background: #ffcc00;
+      color: #000;
+    }
   </style>
 </head>
 
@@ -102,17 +113,28 @@
       <br>
       Option “No” not accepted.
     </div>
+
+    <!-- 👇 Hidden button (appears only after YES) -->
+    <button id="finalBtn" class="hidden final-btn" onclick="finish()">
+      start Again 🤗
+    </button>
   </div>
 
   <script>
     function yesClick() {
       document.getElementById("yesMsg").style.display = "block";
       document.getElementById("noMsg").style.display = "none";
+      document.getElementById("finalBtn").classList.remove("hidden");
     }
 
     function noClick() {
       document.getElementById("noMsg").style.display = "block";
       document.getElementById("yesMsg").style.display = "none";
+      document.getElementById("finalBtn").classList.add("hidden");
+    }
+
+    function finish() {
+      window.location.href = "index.html"; // change if needed
     }
   </script>
 
